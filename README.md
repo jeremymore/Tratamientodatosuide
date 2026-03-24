@@ -26,10 +26,14 @@ El endpoint POST permite crear nuevos recursos en el sistema enviando datos en e
 ### 🟡 Endpoint PUT
 
 El endpoint PUT permite actualizar los datos de un recurso existente en el sistema mediante su ID.
+<img width="711" height="204" alt="image" src="https://github.com/user-attachments/assets/5f743839-f8cb-43e2-b5bf-38389a486356" />
+
 
 ### 🔴 Endpoint DELETE
 
 El endpoint DELETE permite eliminar un recurso específico del sistema utilizando su ID.
+<img width="1076" height="206" alt="image" src="https://github.com/user-attachments/assets/16629325-3079-4d65-a02a-2d5222f550b6" />
+
 
 
 #### ✅ Validación básica de datos
@@ -121,6 +125,31 @@ curl -X 'POST' \
 ```
 
 ![Prueba POST](https://github.com/user-attachments/assets/e36281e2-6a2e-4bfb-ba54-345cf7356562)
+### 🟡 PUT funcionando
+```bash
+curl -X 'PUT' \
+  'http://127.0.0.1:8000/notas/555' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 555,
+  "titulo": "jeremy pruebas EDITADO con put",
+  "contenido": "este contenido fue actualizado",
+  "completada": true,
+  "fecha_inicio": "2026-03-24T20:56:42.756Z",
+  "fecha_fin": "2026-03-24T20:56:42.756Z"
+}'
+```
+<img width="1122" height="543" alt="image" src="https://github.com/user-attachments/assets/861a2476-88b0-4ebc-bf61-b00b9a6cf0a9" />
+
+
+### 🔴 DELETE funcionando
+```bash
+curl -X 'DELETE' \
+  'http://127.0.0.1:8000/notas/555' \
+  -H 'accept: application/json'
+```
+<img width="1120" height="441" alt="image" src="https://github.com/user-attachments/assets/e876b332-9eb5-4e96-8a02-313dead13198" />
 
 ---
 
