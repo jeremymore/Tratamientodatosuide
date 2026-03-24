@@ -47,6 +47,7 @@ La gestión del código fuente se realizó utilizando **Git Flow** con branches 
 1. Se creó una branch nueva para desarrollar la funcionalidad.
 2. Se realizaron los commits correspondientes en dicha branch.
 3. Se hizo **merge** a la branch `main` una vez validada la funcionalidad.
+<img width="450" height="474" alt="{E965924A-84FF-4CB8-BB78-7A766D131FE1}" src="https://github.com/user-attachments/assets/18a8a06a-7e5e-4f38-b65a-0e2ae13ffbcf" />
 
 > 💡 Al menos una funcionalidad fue desarrollada en una branch independiente antes de integrarse a `main`.
 
