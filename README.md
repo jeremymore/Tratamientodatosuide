@@ -23,6 +23,14 @@ El endpoint GET permite consultar recursos existentes del sistema y retorna las 
 El endpoint POST permite crear nuevos recursos en el sistema enviando datos en el cuerpo de la petición.
 
 ![Endpoint POST](https://github.com/user-attachments/assets/e50590e6-ec4b-48a0-99d1-17429115d8ed)
+### 🟡 Endpoint PUT
+
+El endpoint PUT permite actualizar los datos de un recurso existente en el sistema mediante su ID.
+
+### 🔴 Endpoint DELETE
+
+El endpoint DELETE permite eliminar un recurso específico del sistema utilizando su ID.
+
 
 #### ✅ Validación básica de datos
 
