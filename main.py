@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from datetime import datetime
 from typing import Optional, List
@@ -27,3 +27,22 @@ def crear_nota(nota: Nota):
 @app.get("/notas/", response_model=List[Nota])
 def obtener_notas():
     return notas_db
+
+@app.put("/notas/{nota_id}")
+def actualizar_nota(nota_id: int, nota_actualizada: Nota):
+    for index, n in enumerate(notas_db):
+        if n["id"] == nota_id:
+            notas_db[index] = nota_actualizada.dict()
+            return {"mensaje": "Nota actualizada con éxito", "nota": notas_db[index]}
+    
+    # Si termina el ciclo y no encontró el ID, lanza un error 404
+    raise HTTPException(status_code=404, detail="Nota no encontrada")
+
+@app.delete("/notas/{nota_id}")
+def eliminar_nota(nota_id: int):
+    for index, n in enumerate(notas_db):
+        if n["id"] == nota_id:
+            nota_eliminada = notas_db.pop(index)
+            return {"mensaje": "Nota eliminada con éxito", "nota": nota_eliminada}
+            
+    raise HTTPException(status_code=404, detail="Nota no encontrada")
