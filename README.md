@@ -1,7 +1,8 @@
-<img width="1232" height="604" alt="image" src="https://github.com/user-attachments/assets/f267daea-784e-47f9-a368-52f6732490dd" /><img width="983" height="201" alt="{79D99420-3334-43DF-8D9A-CBC46DB54CCD}" src="https://github.com/user-attachments/assets/ffc645ff-cdd0-4610-94f3-44970735ea22" />Proyecto Maestria UIDE
+Proyecto Maestria UIDE
 Parte 1 – Construcción del API
 Endpoint GET
 <img width="493" height="92" alt="{C9335056-2027-4100-8981-A7B8979CA9FB}" src="https://github.com/user-attachments/assets/29610765-5726-4910-805e-901225fad8c2" />
+
 Endpoint POST
 <img width="679" height="164" alt="{62B15296-574A-4143-BAFB-A9BEEF6BF671}" src="https://github.com/user-attachments/assets/e50590e6-ec4b-48a0-99d1-17429115d8ed" />
 	• Validación básica de datos
