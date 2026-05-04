@@ -171,3 +171,22 @@ Se verificaron los distintos escenarios de error que retorna el API:
 
 ---
 
+
+# correcciones
+Preguntas para el trabajo final:
+
+1. Si quisieran escalar este sistema de manejo de notas a una aplicación real, ¿qué funcionalidades o mejoras agregarían?
+
+Si este sistema se llevara a una aplicación real, agregaría funcionalidades que mejoren tanto la seguridad como la experiencia del usuario. Por ejemplo, implementaría un sistema de autenticación con registro e inicio de sesión para que cada usuario gestione sus propias notas. También incluiría autorización, de manera que cada usuario solo pueda acceder a su información.
+
+Otra mejora importante sería agregar persistencia de datos, ya que actualmente las notas se guardan en memoria y se pierden al reiniciar el sistema. Además, se podrían incluir funciones como búsqueda de notas, filtrado por estado (completadas o pendientes), edición de contenido y categorización mediante etiquetas.
+
+Finalmente, añadiría validaciones más robustas, manejo de errores más claro y documentación del API, por ejemplo usando Swagger que ya viene con FastAPI.
+
+2. Si el sistema creciera en número de usuarios o notas, ¿qué cambios harían para mejorar el rendimiento y la organización de la información?
+Si el sistema creciera, lo primero sería reemplazar la base de datos en memoria por una base de datos real como PostgreSQL o MongoDB, lo que permitiría manejar grandes volúmenes de información de forma eficiente y persistente.
+
+También implementaría paginación en los endpoints GET para evitar cargar demasiados datos al mismo tiempo. Además, sería importante indexar campos clave como el ID o fechas para acelerar las consultas.
+
+A nivel de arquitectura, se podría separar el sistema en capas (API, lógica y base de datos) y utilizar contenedores con Docker para facilitar el despliegue y escalabilidad. Finalmente, se podrían aplicar técnicas de caching y balanceo de carga para soportar múltiples usuarios sin afectar el rendimiento.
+
